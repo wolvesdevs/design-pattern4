@@ -2,6 +2,18 @@
 {
     public sealed class Context
     {
-        private IState _state = new OffState(); // 現在の状態を保持する
+        // 現在の状態を保持する
+        private IState _state = new OffState();
+
+        // Clientに公開する窓口を作る
+        public void Up()
+        {
+            _state.UpState();
+        }
+
+        internal void ChangeState(IState state)
+        {
+            _state = state;
+        }
     }
 }

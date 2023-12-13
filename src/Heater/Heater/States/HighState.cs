@@ -1,6 +1,6 @@
 ﻿namespace Heater.States
 {
-    public sealed class HishState : IState
+    public sealed class HighState : IState
     {
         public void UpState()
         {
