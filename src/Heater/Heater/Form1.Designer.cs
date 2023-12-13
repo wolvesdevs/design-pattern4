@@ -54,6 +54,7 @@
             UpButton.TabIndex = 1;
             UpButton.Text = "Up";
             UpButton.UseVisualStyleBackColor = true;
+            UpButton.Click += UpButton_Click;
             // 
             // Form1
             // 
