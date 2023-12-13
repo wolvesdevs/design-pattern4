@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace Heater
 {
     public partial class Form1 : Form
@@ -25,15 +27,32 @@ namespace Heater
             {
                 var list = new List<string>();
                 list.Add("Low");
-                list.Add("50W");
+                list.Add("500W");
+                _condition = Condition.Low;
+                File.WriteAllLines(path, list);
+            }
+            else if (_condition == Condition.Low)
+            {
+                var list = new List<string>();
+                list.Add("High");
+                list.Add("1000W");
+                _condition = Condition.High;
+                File.WriteAllLines(path, list);
+            }
+            else if (_condition == Condition.High)
+            {
+                var list = new List<string>();
+                list.Add("OFF");
+                list.Add("0W");
+                _condition = Condition.OFF;
+                File.WriteAllLines(path, list);
+            }
+            else
+            {
+                throw new Exception("error");
             }
 
-            var list = new List<string>();
-            list.Add("OFF");
-            list.Add("0W");
-            File.WriteAllLines(path, list);
-
-            DisplayLabel.Text = "OFF";
+            DisplayLabel.Text = _condition.ToString();
         }
     }
 }
