@@ -2,6 +2,6 @@
 {
     public interface IState
     {
-        void UpState();
+        void UpState(Context context);
     }
 }

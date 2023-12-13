@@ -8,7 +8,7 @@
         // Clientに公開する窓口を作る
         public void Up()
         {
-            _state.UpState();
+            _state.UpState(this);
         }
 
         internal void ChangeState(IState state)
