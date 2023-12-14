@@ -54,7 +54,7 @@ namespace Heater
                 throw new Exception("error");
             }
 
-            DisplayLabel.Text = _condition.ToString();
+            DisplayLabel.Text = _context.GetText();
         }
     }
 }

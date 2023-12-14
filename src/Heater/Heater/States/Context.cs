@@ -14,7 +14,7 @@ namespace Heater.States
 
         internal string GetText()
         {
-            return _state.GetText(this);
+            return _state.GetText();
         }
 
         internal void ChangeState(IState state)
