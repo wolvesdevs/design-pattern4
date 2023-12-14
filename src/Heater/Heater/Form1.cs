@@ -1,22 +1,24 @@
+using Heater.States;
 using System.Collections.Generic;
 
 namespace Heater
 {
     public partial class Form1 : Form
     {
-        private enum Condition
-        {
-            OFF,
-            Low,
-            High
-        }
-        private Condition _condition = Condition.OFF;
+        private Context _context = new Context();
+        //private enum Condition
+        //{
+        //    OFF,
+        //    Low,
+        //    High
+        //}
+        //private Condition _condition = Condition.OFF;
 
         public Form1()
         {
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
-            DisplayLabel.Text = _condition.ToString();
+            DisplayLabel.Text = _context.GetText();
         }
 
         private void UpButton_Click(object sender, EventArgs e)
@@ -52,7 +54,7 @@ namespace Heater
                 throw new Exception("error");
             }
 
-            DisplayLabel.Text = _condition.ToString();
+            DisplayLabel.Text = _context.GetText();
         }
     }
 }
