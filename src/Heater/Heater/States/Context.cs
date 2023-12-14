@@ -1,4 +1,5 @@
-﻿namespace Heater.States
+﻿
+namespace Heater.States
 {
     public sealed class Context
     {
@@ -9,6 +10,11 @@
         public void Up()
         {
             _state.UpState(this);
+        }
+
+        internal string GetText()
+        {
+            return _state.GetText(this);
         }
 
         internal void ChangeState(IState state)
