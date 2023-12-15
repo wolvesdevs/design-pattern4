@@ -1,5 +1,4 @@
-﻿
-namespace Heater.States
+﻿namespace Heater.States
 {
     public sealed class Context
     {
@@ -10,6 +9,9 @@ namespace Heater.States
         public void Up()
         {
             _state.UpState(this);
+
+            string path = "heater.txt";
+            File.WriteAllLines(path, _state.GetCommand());
         }
 
         internal string GetText()
