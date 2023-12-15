@@ -2,6 +2,11 @@
 {
     public sealed class HighState : IState
     {
+        public IEnumerable<string> GetCommand()
+        {
+            return new List<string> { "High", "1000W" };
+        }
+
         public string GetText()
         {
             return "High";
