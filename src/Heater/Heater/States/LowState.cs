@@ -4,7 +4,7 @@
     {
         public string GetText()
         {
-            return "OFF";
+            return "Low";
         }
 
         public void UpState(Context context)
