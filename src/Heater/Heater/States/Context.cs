@@ -10,6 +10,12 @@ namespace Heater.States
         public void Up()
         {
             _state.UpState(this);
+
+            string path = "heater.txt";
+            //var list = new List<string>();
+            //list.Add("OFF");
+            //list.Add("0W");
+            File.WriteAllLines(path, list);
         }
 
         internal string GetText()

@@ -23,7 +23,7 @@ namespace Heater
 
         private void UpButton_Click(object sender, EventArgs e)
         {
-            string path = "heater.txt";
+            //string path = "heater.txt";
 
             //if (_condition == Condition.OFF)
             //{
