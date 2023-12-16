@@ -1,21 +1,21 @@
 ﻿namespace Heater.States
 {
-    public sealed class LowState : IState
+    internal sealed class MiddleState : IState
     {
         public IEnumerable<string> GetCommand()
         {
-            return new List<string> { "Low", "500W" };
+            return new List<string> { "Mid", "700W" };
         }
 
         public string GetText()
         {
-            return "Low";
+            return "Mid";
         }
 
         public void UpState(Context context)
         {
-            // Hiにしたい
-            context.ChangeState(new MiddleState());
+            // OFFにしたい
+            context.ChangeState(new HighState());
         }
     }
 }
