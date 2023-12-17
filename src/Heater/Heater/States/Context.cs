@@ -9,7 +9,17 @@
         public void Up()
         {
             _state.UpState(this);
+            Send();
+        }
 
+        public void Down()
+        {
+            _state.DownState(this);
+            Send();
+        }
+
+        private void Send()
+        {
             string path = "heater.txt";
             File.WriteAllLines(path, _state.GetCommand());
         }

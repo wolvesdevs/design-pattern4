@@ -17,5 +17,11 @@
             // OFFにしたい
             context.ChangeState(new HighState());
         }
+
+        public void DownState(Context context)
+        {
+            // Lowにしたい
+            context.ChangeState(new LowState());
+        }
     }
 }
