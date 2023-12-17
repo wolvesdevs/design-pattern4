@@ -17,5 +17,11 @@
             // Hiにしたい
             context.ChangeState(new MiddleState());
         }
+
+        public void DownState(Context context)
+        {
+            // OFFにしたい
+            context.ChangeState(new OffState());
+        }
     }
 }
