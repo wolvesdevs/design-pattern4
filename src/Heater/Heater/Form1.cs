@@ -19,5 +19,11 @@ namespace Heater
             _context.Up();
             DisplayLabel.Text = _context.GetText();
         }
+
+        private void DownButton_Click(object sender, EventArgs e)
+        {
+            _context.Down();
+            DisplayLabel.Text = _context.GetText();
+        }
     }
 }
