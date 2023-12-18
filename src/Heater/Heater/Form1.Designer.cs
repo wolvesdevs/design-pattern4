@@ -30,6 +30,7 @@
         {
             DisplayLabel = new Label();
             UpButton = new Button();
+            DownButton = new Button();
             SuspendLayout();
             // 
             // DisplayLabel
@@ -56,11 +57,23 @@
             UpButton.UseVisualStyleBackColor = true;
             UpButton.Click += UpButton_Click;
             // 
+            // DownButton
+            // 
+            DownButton.Font = new Font("Yu Gothic UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            DownButton.Location = new Point(304, 322);
+            DownButton.Name = "DownButton";
+            DownButton.Size = new Size(226, 76);
+            DownButton.TabIndex = 2;
+            DownButton.Text = "Down";
+            DownButton.UseVisualStyleBackColor = true;
+            DownButton.Click += DownButton_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(DownButton);
             Controls.Add(UpButton);
             Controls.Add(DisplayLabel);
             Name = "Form1";
@@ -72,5 +85,6 @@
 
         private Label DisplayLabel;
         private Button UpButton;
+        private Button DownButton;
     }
 }
