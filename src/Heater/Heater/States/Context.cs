@@ -4,6 +4,7 @@
     {
         // 現在の状態を保持する
         private IState _state = new OffState();
+        public event Action? StateChanged;
 
         // Clientに公開する窓口を作る
         public void Up()
@@ -32,6 +33,7 @@
         internal void ChangeState(IState state)
         {
             _state = state;
+            StateChanged?.Invoke();
         }
     }
 }
