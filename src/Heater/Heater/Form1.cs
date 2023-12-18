@@ -11,13 +11,20 @@ namespace Heater
         {
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
+
+            _context_StateChanged();
+            _context.StateChanged += _context_StateChanged; 
+        }
+
+        private void _context_StateChanged()
+        {
             DisplayLabel.Text = _context.GetText();
         }
 
         private void UpButton_Click(object sender, EventArgs e)
         {
             _context.Up();
-            DisplayLabel.Text = _context.GetText();
+            //DisplayLabel.Text = _context.GetText();
         }
 
         private void DownButton_Click(object sender, EventArgs e)
