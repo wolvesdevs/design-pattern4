@@ -23,5 +23,10 @@
             // Highにしたい
             context.ChangeState(new HighState());
         }
+
+        public void OnOffState(Context context)
+        {
+            context.ChangeState(new LowState());
+        }
     }
 }

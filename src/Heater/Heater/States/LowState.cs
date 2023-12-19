@@ -21,6 +21,11 @@
         public void DownState(Context context)
         {
             // OFFにしたい
+            context.ChangeState(new HighState());
+        }
+
+        public void OnOffState(Context context)
+        {
             context.ChangeState(new OffState());
         }
     }
