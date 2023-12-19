@@ -13,7 +13,7 @@ namespace Heater
             StartPosition = FormStartPosition.CenterScreen;
 
             _context_StateChanged();
-            _context.StateChanged += _context_StateChanged; 
+            _context.StateChanged += _context_StateChanged;
         }
 
         private void _context_StateChanged()
@@ -30,7 +30,12 @@ namespace Heater
         private void DownButton_Click(object sender, EventArgs e)
         {
             _context.Down();
-            DisplayLabel.Text = _context.GetText();
+            //DisplayLabel.Text = _context.GetText();
+        }
+
+        private void OnOffButton_Click(object sender, EventArgs e)
+        {
+            //_context.OnOff();
         }
     }
 }
