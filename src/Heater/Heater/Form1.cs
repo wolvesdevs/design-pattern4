@@ -35,7 +35,7 @@ namespace Heater
 
         private void OnOffButton_Click(object sender, EventArgs e)
         {
-            //_context.OnOff();
+            _context.OnOff();
         }
     }
 }

@@ -14,14 +14,19 @@
 
         public void UpState(Context context)
         {
-            // OFFにしたい
-            context.ChangeState(new OffState());
+            // Lowにしたい
+            context.ChangeState(new LowState());
         }
 
         public void DownState(Context context)
         {
             // Midにしたい
             context.ChangeState(new MiddleState());
+        }
+
+        public void OnOffState(Context context)
+        {
+            context.ChangeState(new OffState());
         }
     }
 }
