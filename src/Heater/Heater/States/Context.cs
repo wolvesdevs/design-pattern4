@@ -27,6 +27,11 @@
 
         public void Max()
         {
+            if (_state is OffState)
+            {
+                throw new Exception("OFF状態ではMaxにできません");
+            }
+
             ChangeState(new HighState());
             Send();
         }
