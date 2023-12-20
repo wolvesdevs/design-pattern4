@@ -14,12 +14,12 @@
 
         public void UpState(Context context)
         {
-            throw new Exception("OFF状態ではUpできません");
+            throw new OffException();
         }
 
         public void DownState(Context context)
         {
-            throw new Exception("OFF状態ではDownできません");
+            throw new OffException();
         }
 
         public void OnOffState(Context context)

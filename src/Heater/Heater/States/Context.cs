@@ -29,7 +29,7 @@
         {
             if (_state is OffState)
             {
-                throw new Exception("OFF状態ではMaxにできません");
+                throw new OffException();
             }
 
             ChangeState(new HighState());
