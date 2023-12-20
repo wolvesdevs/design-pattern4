@@ -25,6 +25,12 @@
             Send();
         }
 
+        public void Max()
+        {
+            ChangeState(new HighState());
+            Send();
+        }
+
         private void Send()
         {
             string path = "heater.txt";
