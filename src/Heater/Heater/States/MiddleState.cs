@@ -15,7 +15,7 @@
         public void UpState(Context context)
         {
             // Highにしたい
-            context.ChangeState(new HighState());
+            context.ChangeState(HighState.Instance);
         }
 
         public void DownState(Context context)

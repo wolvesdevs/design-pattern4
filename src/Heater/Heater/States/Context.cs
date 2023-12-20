@@ -32,7 +32,7 @@
                 throw new OffException();
             }
 
-            ChangeState(new HighState());
+            ChangeState(HighState.Instance);
             Send();
         }
 
