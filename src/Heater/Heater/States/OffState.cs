@@ -14,14 +14,12 @@
 
         public void UpState(Context context)
         {
-            // Lowにしたい
-            context.ChangeState(new LowState());
+            throw new Exception("OFF状態ではUpできません");
         }
 
         public void DownState(Context context)
         {
-            // Highにしたい
-            context.ChangeState(new HighState());
+            throw new Exception("OFF状態ではDownできません");
         }
 
         public void OnOffState(Context context)
