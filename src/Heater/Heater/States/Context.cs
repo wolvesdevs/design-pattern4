@@ -3,7 +3,7 @@
     public sealed class Context
     {
         // 現在の状態を保持する
-        private IState _state = new OffState();
+        private IState _state = OffState.Instance;
         public event Action? StateChanged;
 
         // Clientに公開する窓口を作る
