@@ -32,6 +32,7 @@
             UpButton = new Button();
             DownButton = new Button();
             OnOffButton = new Button();
+            MaxButton = new Button();
             SuspendLayout();
             // 
             // DisplayLabel
@@ -80,11 +81,23 @@
             OnOffButton.UseVisualStyleBackColor = true;
             OnOffButton.Click += OnOffButton_Click;
             // 
+            // MaxButton
+            // 
+            MaxButton.Font = new Font("Yu Gothic UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            MaxButton.Location = new Point(562, 240);
+            MaxButton.Name = "MaxButton";
+            MaxButton.Size = new Size(226, 76);
+            MaxButton.TabIndex = 4;
+            MaxButton.Text = "Max";
+            MaxButton.UseVisualStyleBackColor = true;
+            MaxButton.Click += MaxButton_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(MaxButton);
             Controls.Add(OnOffButton);
             Controls.Add(DownButton);
             Controls.Add(UpButton);
@@ -100,5 +113,6 @@
         private Button UpButton;
         private Button DownButton;
         private Button OnOffButton;
+        private Button MaxButton;
     }
 }
