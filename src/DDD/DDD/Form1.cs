@@ -12,7 +12,7 @@ namespace DDD
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var component = new ComponentA(radioButton2.Checked);
+            var component = new ComponentA(radioButton2.Checked, radioButton3.Checked);
             var value = component.GetData();
             button1.Text = value;
         }
