@@ -34,4 +34,12 @@ namespace DDD.Objects
             return base.GetData().ToUpper();
         }
     }
+
+    public sealed class ComponentLower : ComponentA
+    {
+        public override string GetData()
+        {
+            return base.GetData().ToLower();
+        }
+    }
 }

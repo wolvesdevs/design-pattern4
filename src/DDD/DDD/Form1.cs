@@ -19,6 +19,10 @@ namespace DDD
             {
                 component = new ComponentAUpper();
             }
+            else if (radioButton3.Checked)
+            {
+                component = new ComponentLower();
+            }
 
             var value = component.GetData();
             button1.Text = value;
