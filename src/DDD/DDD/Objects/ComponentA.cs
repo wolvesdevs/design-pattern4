@@ -8,21 +8,10 @@ namespace DDD.Objects
         {
             return File.ReadAllText("textA.txt");
         }
-    }
 
-    public sealed class ComponentAUpper : ComponentA
-    {
-        public override string GetData()
+        public string GetDataUpper()
         {
-            return base.GetData().ToUpper();
-        }
-    }
-
-    public sealed class ComponentALower : ComponentA
-    {
-        public override string GetData()
-        {
-            return base.GetData().ToLower();
+            return GetData().ToUpper();
         }
     }
 }

@@ -13,35 +13,35 @@ namespace DDD
         private void button1_Click(object sender, EventArgs e)
         {
             var component = new ComponentA();
+            string value = "";
 
             if (radioButton2.Checked)
             {
-                component = new ComponentAUpper();
+                value = component.GetDataUpper();
             }
-            else if (radioButton3.Checked)
+            else
             {
-                component = new ComponentALower();
+                value = component.GetData();
             }
 
-            var value = component.GetData();
             button1.Text = value;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            var component = new ComponentB();
+            //var component = new ComponentB();
 
-            if (radioButton2.Checked)
-            {
-                component = new ComponentBUpper();
-            }
-            else if (radioButton3.Checked)
-            {
-                component = new ComponentBLower();
-            }
+            //if (radioButton2.Checked)
+            //{
+            //    component = new ComponentBUpper();
+            //}
+            //else if (radioButton3.Checked)
+            //{
+            //    component = new ComponentBLower();
+            //}
 
-            var value = component.GetData();
-            button2.Text = value;
+            //var value = component.GetData();
+            //button2.Text = value;
         }
     }
 }
