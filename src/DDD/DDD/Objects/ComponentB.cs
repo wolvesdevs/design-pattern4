@@ -2,31 +2,27 @@
 
 namespace DDD.Objects
 {
-    //internal sealed class ComponentB : IComponent
-    //{
-        //private bool _isUpper = false;
-        //private bool _isLower = false;
+    public class ComponentB : IComponent
+    {
+        public virtual string GetData()
+        {
+            return File.ReadAllText("textB.txt");
+        }
+    }
 
-        //public ComponentB(bool isUpper, bool isLower)
-        //{
-        //    _isUpper = isUpper;
-        //    _isLower = isLower;
-        //}
+    public sealed class ComponentBUpper : ComponentB
+    {
+        public override string GetData()
+        {
+            return base.GetData().ToUpper();
+        }
+    }
 
-        //public string GetData()
-        //{
-        //    var result = File.ReadAllText("textB.txt");
-
-        //    if (_isUpper)
-        //    {
-        //        return result.ToUpper();
-        //    }
-        //    else if (_isLower)
-        //    {
-        //        return result.ToLower();
-        //    }
-
-        //    return result;
-        //}
-    //}
+    public sealed class ComponentBLower : ComponentB
+    {
+        public override string GetData()
+        {
+            return base.GetData().ToLower();
+        }
+    }
 }

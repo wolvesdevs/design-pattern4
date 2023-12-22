@@ -12,7 +12,6 @@ namespace DDD
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //var component = new ComponentA(radioButton2.Checked, radioButton3.Checked);
             var component = new ComponentA();
 
             if (radioButton2.Checked)
@@ -21,7 +20,7 @@ namespace DDD
             }
             else if (radioButton3.Checked)
             {
-                component = new ComponentLower();
+                component = new ComponentALower();
             }
 
             var value = component.GetData();
@@ -30,9 +29,19 @@ namespace DDD
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //var component = new ComponentB(radioButton2.Checked, radioButton3.Checked);
-            //var value = component.GetData();
-            //button2.Text = value;
+            var component = new ComponentB();
+
+            if (radioButton2.Checked)
+            {
+                component = new ComponentBUpper();
+            }
+            else if (radioButton3.Checked)
+            {
+                component = new ComponentBLower();
+            }
+
+            var value = component.GetData();
+            button2.Text = value;
         }
     }
 }
