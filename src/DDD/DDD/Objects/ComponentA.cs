@@ -2,16 +2,11 @@
 
 namespace DDD.Objects
 {
-    public class ComponentA : IComponent
+    public sealed class ComponentA : IComponent
     {
-        public virtual string GetData()
+        public string GetData()
         {
             return File.ReadAllText("textA.txt");
-        }
-
-        public string GetDataUpper()
-        {
-            return GetData().ToUpper();
         }
     }
 }

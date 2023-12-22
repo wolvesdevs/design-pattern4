@@ -3,6 +3,5 @@
     public interface IComponent
     {
         string GetData();
-        string GetDataUpper();
     }
 }
