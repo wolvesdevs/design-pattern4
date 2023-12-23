@@ -2,6 +2,9 @@
 {
     public sealed class HighState : IState
     {
+        private HighState() { }
+        public static HighState Instance { get; } = new HighState();
+
         public IEnumerable<string> GetCommand()
         {
             return new List<string> { "High", "1000W" };
@@ -14,14 +17,19 @@
 
         public void UpState(Context context)
         {
-            // OFFにしたい
-            context.ChangeState(new OffState());
+            // Lowにしたい
+            context.ChangeState(LowState.Instance);
         }
 
         public void DownState(Context context)
         {
             // Midにしたい
-            context.ChangeState(new MiddleState());
+            context.ChangeState(MiddleState.Instance);
+        }
+
+        public void OnOffState(Context context)
+        {
+            context.ChangeState(OffState.Instance);
         }
     }
 }

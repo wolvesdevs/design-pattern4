@@ -3,7 +3,8 @@
     public sealed class Context
     {
         // 現在の状態を保持する
-        private IState _state = new OffState();
+        private IState _state = OffState.Instance;
+        public event Action? StateChanged;
 
         // Clientに公開する窓口を作る
         public void Up()
@@ -15,6 +16,23 @@
         public void Down()
         {
             _state.DownState(this);
+            Send();
+        }
+
+        public void OnOff()
+        {
+            _state.OnOffState(this);
+            Send();
+        }
+
+        public void Max()
+        {
+            if (_state is OffState)
+            {
+                throw new OffException();
+            }
+
+            ChangeState(HighState.Instance);
             Send();
         }
 
@@ -32,6 +50,7 @@
         internal void ChangeState(IState state)
         {
             _state = state;
+            StateChanged?.Invoke();
         }
     }
 }

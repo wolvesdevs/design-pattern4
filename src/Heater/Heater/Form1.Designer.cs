@@ -31,6 +31,8 @@
             DisplayLabel = new Label();
             UpButton = new Button();
             DownButton = new Button();
+            OnOffButton = new Button();
+            MaxButton = new Button();
             SuspendLayout();
             // 
             // DisplayLabel
@@ -39,7 +41,7 @@
             DisplayLabel.BorderStyle = BorderStyle.FixedSingle;
             DisplayLabel.Font = new Font("Yu Gothic UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
             DisplayLabel.ForeColor = Color.Purple;
-            DisplayLabel.Location = new Point(125, 57);
+            DisplayLabel.Location = new Point(125, 103);
             DisplayLabel.Name = "DisplayLabel";
             DisplayLabel.Size = new Size(549, 125);
             DisplayLabel.TabIndex = 0;
@@ -68,11 +70,35 @@
             DownButton.UseVisualStyleBackColor = true;
             DownButton.Click += DownButton_Click;
             // 
+            // OnOffButton
+            // 
+            OnOffButton.Font = new Font("Yu Gothic UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            OnOffButton.Location = new Point(21, 12);
+            OnOffButton.Name = "OnOffButton";
+            OnOffButton.Size = new Size(226, 76);
+            OnOffButton.TabIndex = 3;
+            OnOffButton.Text = "ON/OFF";
+            OnOffButton.UseVisualStyleBackColor = true;
+            OnOffButton.Click += OnOffButton_Click;
+            // 
+            // MaxButton
+            // 
+            MaxButton.Font = new Font("Yu Gothic UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            MaxButton.Location = new Point(562, 240);
+            MaxButton.Name = "MaxButton";
+            MaxButton.Size = new Size(226, 76);
+            MaxButton.TabIndex = 4;
+            MaxButton.Text = "Max";
+            MaxButton.UseVisualStyleBackColor = true;
+            MaxButton.Click += MaxButton_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(MaxButton);
+            Controls.Add(OnOffButton);
             Controls.Add(DownButton);
             Controls.Add(UpButton);
             Controls.Add(DisplayLabel);
@@ -86,5 +112,7 @@
         private Label DisplayLabel;
         private Button UpButton;
         private Button DownButton;
+        private Button OnOffButton;
+        private Button MaxButton;
     }
 }
