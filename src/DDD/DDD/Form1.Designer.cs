@@ -31,6 +31,7 @@
             button1 = new Button();
             radioButton1 = new RadioButton();
             radioButton2 = new RadioButton();
+            radioButton3 = new RadioButton();
             SuspendLayout();
             // 
             // button1
@@ -68,11 +69,24 @@
             radioButton2.Text = "大文字";
             radioButton2.UseVisualStyleBackColor = true;
             // 
+            // radioButton3
+            // 
+            radioButton3.AutoSize = true;
+            radioButton3.Font = new Font("Yu Gothic UI", 18F);
+            radioButton3.Location = new Point(564, 50);
+            radioButton3.Name = "radioButton3";
+            radioButton3.Size = new Size(153, 52);
+            radioButton3.TabIndex = 13;
+            radioButton3.TabStop = true;
+            radioButton3.Text = "小文字";
+            radioButton3.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(radioButton3);
             Controls.Add(radioButton2);
             Controls.Add(radioButton1);
             Controls.Add(button1);
@@ -87,5 +101,6 @@
         private Button button1;
         private RadioButton radioButton1;
         private RadioButton radioButton2;
+        private RadioButton radioButton3;
     }
 }
