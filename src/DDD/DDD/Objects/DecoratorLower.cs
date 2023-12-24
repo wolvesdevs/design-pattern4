@@ -1,15 +1,12 @@
 ﻿namespace DDD.Objects
 {
-    public sealed class DecoratorLower : IComponent
+    public sealed class DecoratorLower : Decorator
     {
-        private IComponent _child;
-
-        public DecoratorLower(IComponent child)
+        public DecoratorLower(IComponent child) : base(child)
         {
-            _child = child;
         }
 
-        public string GetData()
+        protected override string GetDataSub()
         {
             return _child.GetData().ToLower();
         }
