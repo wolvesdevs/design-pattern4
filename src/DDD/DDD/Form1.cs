@@ -18,9 +18,14 @@ namespace DDD
             {
                 component = new DecoratorUpper(component);
             }
+            else if (radioButton3.Checked)
+            {
+                component = new DecoratorLower(component);
+            }
 
             string value = component.GetData();
             button1.Text = value;
         }
+
     }
 }
