@@ -12,9 +12,20 @@ namespace DDD
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var component = new ComponentA();
+            IComponent component = new ComponentA();
+
+            if (radioButton2.Checked)
+            {
+                component = new DecoratorUpper(component);
+            }
+            else if (radioButton3.Checked)
+            {
+                component = new DecoratorLower(component);
+            }
+
             string value = component.GetData();
             button1.Text = value;
         }
+
     }
 }
