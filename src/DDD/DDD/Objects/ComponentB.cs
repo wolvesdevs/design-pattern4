@@ -2,16 +2,16 @@
 
 namespace DDD.Objects
 {
-    public sealed class ComponentA : IComponent
+    public sealed class ComponentB : IComponent
     {
         public string GetData()
         {
-            return File.ReadAllText("textA.txt");
+            return File.ReadAllText("textB.txt");
         }
 
         public int GetPrice()
         {
-            return 100;
+            return 200;
         }
     }
 }
