@@ -8,5 +8,10 @@ namespace DDD.Objects
         {
             return File.ReadAllText("textA.txt");
         }
+
+        public int GetPrice()
+        {
+            return 100;
+        }
     }
 }
