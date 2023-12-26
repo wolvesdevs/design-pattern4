@@ -31,6 +31,7 @@
             textBox1 = new TextBox();
             MeasureButton = new Button();
             listBox1 = new ListBox();
+            XORCheckBox = new CheckBox();
             SuspendLayout();
             // 
             // textBox1
@@ -59,14 +60,26 @@
             listBox1.ItemHeight = 48;
             listBox1.Location = new Point(36, 192);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(548, 292);
+            listBox1.Size = new Size(842, 292);
             listBox1.TabIndex = 2;
+            // 
+            // XORCheckBox
+            // 
+            XORCheckBox.AutoSize = true;
+            XORCheckBox.Font = new Font("Yu Gothic UI", 18F);
+            XORCheckBox.Location = new Point(463, 30);
+            XORCheckBox.Name = "XORCheckBox";
+            XORCheckBox.Size = new Size(154, 52);
+            XORCheckBox.TabIndex = 3;
+            XORCheckBox.Text = "暗号化";
+            XORCheckBox.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(890, 503);
+            Controls.Add(XORCheckBox);
             Controls.Add(listBox1);
             Controls.Add(MeasureButton);
             Controls.Add(textBox1);
@@ -81,5 +94,6 @@
         private TextBox textBox1;
         private Button MeasureButton;
         private ListBox listBox1;
+        private CheckBox XORCheckBox;
     }
 }
