@@ -32,6 +32,7 @@
             MeasureButton = new Button();
             listBox1 = new ListBox();
             XORCheckBox = new CheckBox();
+            ZipCheckBox = new CheckBox();
             SuspendLayout();
             // 
             // textBox1
@@ -74,11 +75,23 @@
             XORCheckBox.Text = "暗号化";
             XORCheckBox.UseVisualStyleBackColor = true;
             // 
+            // ZipCheckBox
+            // 
+            ZipCheckBox.AutoSize = true;
+            ZipCheckBox.Font = new Font("Yu Gothic UI", 18F);
+            ZipCheckBox.Location = new Point(463, 103);
+            ZipCheckBox.Name = "ZipCheckBox";
+            ZipCheckBox.Size = new Size(118, 52);
+            ZipCheckBox.TabIndex = 4;
+            ZipCheckBox.Text = "圧縮";
+            ZipCheckBox.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(890, 503);
+            Controls.Add(ZipCheckBox);
             Controls.Add(XORCheckBox);
             Controls.Add(listBox1);
             Controls.Add(MeasureButton);
@@ -95,5 +108,6 @@
         private Button MeasureButton;
         private ListBox listBox1;
         private CheckBox XORCheckBox;
+        private CheckBox ZipCheckBox;
     }
 }

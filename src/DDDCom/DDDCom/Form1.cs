@@ -20,6 +20,11 @@ namespace DDDCom
                 message = new MessageDecoratorXOR(message);
             }
 
+            if (ZipCheckBox.Checked)
+            {
+                message = new MessageDecoratorZip(message);
+            }
+
             listBox1.Items.Add(string.Join("-", message.GetBytes()));
         }
     }
