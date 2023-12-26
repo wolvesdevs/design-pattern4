@@ -33,6 +33,7 @@
             listBox1 = new ListBox();
             XORCheckBox = new CheckBox();
             ZipCheckBox = new CheckBox();
+            button1 = new Button();
             SuspendLayout();
             // 
             // textBox1
@@ -48,7 +49,7 @@
             MeasureButton.Font = new Font("Yu Gothic UI", 18F);
             MeasureButton.Location = new Point(36, 103);
             MeasureButton.Name = "MeasureButton";
-            MeasureButton.Size = new Size(306, 67);
+            MeasureButton.Size = new Size(163, 67);
             MeasureButton.TabIndex = 1;
             MeasureButton.Text = "measure";
             MeasureButton.UseVisualStyleBackColor = true;
@@ -86,11 +87,23 @@
             ZipCheckBox.Text = "圧縮";
             ZipCheckBox.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            button1.Font = new Font("Yu Gothic UI", 18F);
+            button1.Location = new Point(216, 103);
+            button1.Name = "button1";
+            button1.Size = new Size(163, 67);
+            button1.TabIndex = 5;
+            button1.Text = "stop";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(890, 503);
+            Controls.Add(button1);
             Controls.Add(ZipCheckBox);
             Controls.Add(XORCheckBox);
             Controls.Add(listBox1);
@@ -109,5 +122,6 @@
         private ListBox listBox1;
         private CheckBox XORCheckBox;
         private CheckBox ZipCheckBox;
+        private Button button1;
     }
 }

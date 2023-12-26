@@ -14,7 +14,18 @@ namespace DDDCom
         {
             var measureId = Convert.ToInt32(textBox1.Text);
             IMessage message = new MeasureMessage(measureId);
+            Send(message);
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var measureId = Convert.ToInt32(textBox1.Text);
+            IMessage message = new StopMessage(measureId);
+            Send(message);
+        }
+
+        private void Send(IMessage message)
+        {
             if (XORCheckBox.Checked)
             {
                 message = new MessageDecoratorXOR(message);
