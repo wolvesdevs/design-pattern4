@@ -32,6 +32,7 @@
             button1 = new Button();
             MeasureLabel = new Label();
             KandoLabel = new Label();
+            button2 = new Button();
             SuspendLayout();
             // 
             // NameLabel
@@ -78,11 +79,23 @@
             KandoLabel.TabIndex = 5;
             KandoLabel.Text = "label3";
             // 
+            // button2
+            // 
+            button2.Font = new Font("Yu Gothic UI", 18F);
+            button2.Location = new Point(271, 296);
+            button2.Name = "button2";
+            button2.Size = new Size(197, 69);
+            button2.TabIndex = 11;
+            button2.Text = "風力";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(912, 520);
+            Controls.Add(button2);
             Controls.Add(KandoLabel);
             Controls.Add(MeasureLabel);
             Controls.Add(button1);
@@ -98,5 +111,6 @@
         private Button button1;
         private Label MeasureLabel;
         private Label KandoLabel;
+        private Button button2;
     }
 }
