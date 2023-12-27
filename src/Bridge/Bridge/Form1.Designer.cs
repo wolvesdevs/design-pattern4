@@ -28,22 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
+            NameLabel = new Label();
             button1 = new Button();
-            label2 = new Label();
-            label3 = new Label();
+            MeasureLabel = new Label();
+            KandoLabel = new Label();
             SuspendLayout();
             // 
-            // label1
+            // NameLabel
             // 
-            label1.BackColor = Color.White;
-            label1.BorderStyle = BorderStyle.FixedSingle;
-            label1.Font = new Font("Yu Gothic UI", 18F);
-            label1.Location = new Point(68, 53);
-            label1.Name = "label1";
-            label1.Size = new Size(298, 60);
-            label1.TabIndex = 0;
-            label1.Text = "label1";
+            NameLabel.BackColor = Color.White;
+            NameLabel.BorderStyle = BorderStyle.FixedSingle;
+            NameLabel.Font = new Font("Yu Gothic UI", 18F);
+            NameLabel.Location = new Point(68, 53);
+            NameLabel.Name = "NameLabel";
+            NameLabel.Size = new Size(298, 60);
+            NameLabel.TabIndex = 0;
+            NameLabel.Text = "label1";
             // 
             // button1
             // 
@@ -51,42 +51,42 @@
             button1.Location = new Point(68, 296);
             button1.Name = "button1";
             button1.Size = new Size(197, 69);
-            button1.TabIndex = 3;
+            button1.TabIndex = 10;
             button1.Text = "温度";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // label2
+            // MeasureLabel
             // 
-            label2.BackColor = Color.White;
-            label2.BorderStyle = BorderStyle.FixedSingle;
-            label2.Font = new Font("Yu Gothic UI", 18F);
-            label2.Location = new Point(68, 125);
-            label2.Name = "label2";
-            label2.Size = new Size(298, 60);
-            label2.TabIndex = 4;
-            label2.Text = "label2";
+            MeasureLabel.BackColor = Color.White;
+            MeasureLabel.BorderStyle = BorderStyle.FixedSingle;
+            MeasureLabel.Font = new Font("Yu Gothic UI", 18F);
+            MeasureLabel.Location = new Point(68, 125);
+            MeasureLabel.Name = "MeasureLabel";
+            MeasureLabel.Size = new Size(298, 60);
+            MeasureLabel.TabIndex = 4;
+            MeasureLabel.Text = "label2";
             // 
-            // label3
+            // KandoLabel
             // 
-            label3.BackColor = Color.White;
-            label3.BorderStyle = BorderStyle.FixedSingle;
-            label3.Font = new Font("Yu Gothic UI", 18F);
-            label3.Location = new Point(68, 198);
-            label3.Name = "label3";
-            label3.Size = new Size(298, 60);
-            label3.TabIndex = 5;
-            label3.Text = "label3";
+            KandoLabel.BackColor = Color.White;
+            KandoLabel.BorderStyle = BorderStyle.FixedSingle;
+            KandoLabel.Font = new Font("Yu Gothic UI", 18F);
+            KandoLabel.Location = new Point(68, 198);
+            KandoLabel.Name = "KandoLabel";
+            KandoLabel.Size = new Size(298, 60);
+            KandoLabel.TabIndex = 5;
+            KandoLabel.Text = "label3";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(912, 520);
-            Controls.Add(label3);
-            Controls.Add(label2);
+            Controls.Add(KandoLabel);
+            Controls.Add(MeasureLabel);
             Controls.Add(button1);
-            Controls.Add(label1);
+            Controls.Add(NameLabel);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
@@ -94,9 +94,9 @@
 
         #endregion
 
-        private Label label1;
+        private Label NameLabel;
         private Button button1;
-        private Label label2;
-        private Label label3;
+        private Label MeasureLabel;
+        private Label KandoLabel;
     }
 }

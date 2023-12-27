@@ -1,3 +1,5 @@
+using Bridge.Devices;
+
 namespace Bridge
 {
     public partial class Form1 : Form
@@ -10,7 +12,10 @@ namespace Bridge
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            var device = new TempDevice();
+            NameLabel.Text = device.GetName();
+            MeasureLabel.Text = device.GetMeasure();
+            KandoLabel.Text = device.GetKando();
         }
     }
 }
