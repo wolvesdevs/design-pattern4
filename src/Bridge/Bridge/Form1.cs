@@ -16,6 +16,7 @@ namespace Bridge
             NameLabel.Text = device.GetName();
             MeasureLabel.Text = device.GetMeasure();
             KandoLabel.Text = device.GetKando();
+            BatteryLevelLabel.Text = "--";
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -24,6 +25,7 @@ namespace Bridge
             NameLabel.Text = device.GetName();
             MeasureLabel.Text = device.GetMeasure();
             KandoLabel.Text = device.GetKando();
+            BatteryLevelLabel.Text = "--";
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -32,6 +34,7 @@ namespace Bridge
             NameLabel.Text = device.GetName();
             MeasureLabel.Text = device.GetMeasure();
             KandoLabel.Text = device.GetKando();
+            BatteryLevelLabel.Text = device.GetBatteryLeval();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -40,6 +43,7 @@ namespace Bridge
             NameLabel.Text = device.GetName();
             MeasureLabel.Text = device.GetMeasure();
             KandoLabel.Text = device.GetKando();
+            BatteryLevelLabel.Text = device.GetBatteryLeval();
         }
     }
 }

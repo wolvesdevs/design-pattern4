@@ -35,6 +35,7 @@
             button2 = new Button();
             button3 = new Button();
             button4 = new Button();
+            BatteryLevelLabel = new Label();
             SuspendLayout();
             // 
             // NameLabel
@@ -114,11 +115,23 @@
             button4.UseVisualStyleBackColor = true;
             button4.Click += button4_Click;
             // 
+            // BatteryLevelLabel
+            // 
+            BatteryLevelLabel.BackColor = Color.White;
+            BatteryLevelLabel.BorderStyle = BorderStyle.FixedSingle;
+            BatteryLevelLabel.Font = new Font("Yu Gothic UI", 18F);
+            BatteryLevelLabel.Location = new Point(372, 198);
+            BatteryLevelLabel.Name = "BatteryLevelLabel";
+            BatteryLevelLabel.Size = new Size(298, 60);
+            BatteryLevelLabel.TabIndex = 14;
+            BatteryLevelLabel.Text = "label3";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(912, 520);
+            Controls.Add(BatteryLevelLabel);
             Controls.Add(button3);
             Controls.Add(button4);
             Controls.Add(button2);
@@ -140,5 +153,6 @@
         private Button button2;
         private Button button3;
         private Button button4;
+        private Label BatteryLevelLabel;
     }
 }
