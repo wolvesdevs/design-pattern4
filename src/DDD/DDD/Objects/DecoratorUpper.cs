@@ -10,5 +10,10 @@
         {
             return _child.GetData().ToUpper();
         }
+
+        protected override int GetPriceSub()
+        {
+            return 40;
+        }
     }
 }

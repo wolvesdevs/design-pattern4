@@ -1,4 +1,5 @@
-﻿namespace DDD.Objects
+﻿
+namespace DDD.Objects
 {
     // 1. 同じインターフェースの実装にする
     public abstract class Decorator : IComponent
@@ -18,6 +19,12 @@
             return GetDataSub();
         }
 
+        public int GetPrice()
+        {
+            return _child.GetPrice() + GetPriceSub();
+        }
+
         protected abstract string GetDataSub();
+        protected abstract int GetPriceSub();
     }
 }
