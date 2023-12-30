@@ -14,7 +14,7 @@ namespace Bridge.Devices
 
         public string GetName()
         {
-            return _measure.GetName();
+            return _measure.GetName() + GetDeviceName();
         }
 
         public string GetMeasure()
@@ -26,5 +26,9 @@ namespace Bridge.Devices
         {
             return _random.Next(0, 100) + "db";
         }
+
+        public abstract string GetBatteryLeval();
+        protected abstract string GetDeviceName();
+        public abstract string GetSunLeval();
     }
 }
