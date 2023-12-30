@@ -1,4 +1,5 @@
 using Bridge.Devices;
+using Bridge.Measures;
 
 namespace Bridge
 {
@@ -12,7 +13,7 @@ namespace Bridge
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var device = new TempDevice();
+            var device = new AcDevice(new TempMeasure());
             NameLabel.Text = device.GetName();
             MeasureLabel.Text = device.GetMeasure();
             KandoLabel.Text = device.GetKando();
@@ -21,7 +22,7 @@ namespace Bridge
 
         private void button2_Click(object sender, EventArgs e)
         {
-            var device = new WindDevice();
+            var device = new AcDevice(new WindMeasure());
             NameLabel.Text = device.GetName();
             MeasureLabel.Text = device.GetMeasure();
             KandoLabel.Text = device.GetKando();
@@ -30,7 +31,7 @@ namespace Bridge
 
         private void button4_Click(object sender, EventArgs e)
         {
-            var device = new TempBatteryDevice();
+            var device = new BatteryDevice(new TempMeasure());
             NameLabel.Text = device.GetName();
             MeasureLabel.Text = device.GetMeasure();
             KandoLabel.Text = device.GetKando();
@@ -39,7 +40,7 @@ namespace Bridge
 
         private void button3_Click(object sender, EventArgs e)
         {
-            var device = new WindBatteryDevice();
+            var device = new BatteryDevice(new WindMeasure());
             NameLabel.Text = device.GetName();
             MeasureLabel.Text = device.GetMeasure();
             KandoLabel.Text = device.GetKando();
