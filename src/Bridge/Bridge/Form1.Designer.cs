@@ -36,6 +36,8 @@
             button3 = new Button();
             button4 = new Button();
             BatteryLevelLabel = new Label();
+            button5 = new Button();
+            button6 = new Button();
             SuspendLayout();
             // 
             // NameLabel
@@ -54,7 +56,7 @@
             button1.Font = new Font("Yu Gothic UI", 18F);
             button1.Location = new Point(68, 296);
             button1.Name = "button1";
-            button1.Size = new Size(197, 69);
+            button1.Size = new Size(257, 69);
             button1.TabIndex = 10;
             button1.Text = "温度";
             button1.UseVisualStyleBackColor = true;
@@ -87,7 +89,7 @@
             button2.Font = new Font("Yu Gothic UI", 18F);
             button2.Location = new Point(331, 296);
             button2.Name = "button2";
-            button2.Size = new Size(197, 69);
+            button2.Size = new Size(257, 69);
             button2.TabIndex = 11;
             button2.Text = "風力";
             button2.UseVisualStyleBackColor = true;
@@ -126,11 +128,35 @@
             BatteryLevelLabel.TabIndex = 14;
             BatteryLevelLabel.Text = "label3";
             // 
+            // button5
+            // 
+            button5.Font = new Font("Yu Gothic UI", 18F);
+            button5.Location = new Point(598, 385);
+            button5.Name = "button5";
+            button5.Size = new Size(309, 69);
+            button5.TabIndex = 16;
+            button5.Text = "温度予測バッテリー";
+            button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
+            // 
+            // button6
+            // 
+            button6.Font = new Font("Yu Gothic UI", 18F);
+            button6.Location = new Point(598, 296);
+            button6.Name = "button6";
+            button6.Size = new Size(309, 69);
+            button6.TabIndex = 15;
+            button6.Text = "温度予測";
+            button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(912, 520);
+            ClientSize = new Size(1024, 520);
+            Controls.Add(button5);
+            Controls.Add(button6);
             Controls.Add(BatteryLevelLabel);
             Controls.Add(button3);
             Controls.Add(button4);
@@ -154,5 +180,7 @@
         private Button button3;
         private Button button4;
         private Label BatteryLevelLabel;
+        private Button button5;
+        private Button button6;
     }
 }

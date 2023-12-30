@@ -46,5 +46,23 @@ namespace Bridge
             KandoLabel.Text = device.GetKando();
             BatteryLevelLabel.Text = device.GetBatteryLeval();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Device device = new AcDevice(new AutoTempMeasure());
+            NameLabel.Text = device.GetName();
+            MeasureLabel.Text = device.GetMeasure();
+            KandoLabel.Text = device.GetKando();
+            BatteryLevelLabel.Text = device.GetBatteryLeval();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Device device = new BatteryDevice(new AutoTempMeasure());
+            NameLabel.Text = device.GetName();
+            MeasureLabel.Text = device.GetMeasure();
+            KandoLabel.Text = device.GetKando();
+            BatteryLevelLabel.Text = device.GetBatteryLeval();
+        }
     }
 }
