@@ -29,5 +29,6 @@ namespace Bridge.Devices
 
         public abstract string GetBatteryLeval();
         protected abstract string GetDeviceName();
+        public abstract string GetSunLeval();
     }
 }

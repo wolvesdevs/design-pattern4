@@ -2,27 +2,27 @@
 
 namespace Bridge.Devices
 {
-    public sealed class BatteryDevice : Device
+    public sealed class SunDevice : Device
     {
         private Random _random = new Random();
 
-        public BatteryDevice(IMeasure measure) : base(measure)
+        public SunDevice(IMeasure measure) : base(measure)
         {
         }
 
         public override string GetBatteryLeval()
         {
-            return _random.Next(0, 100) + "%";
+            return "--";
         }
 
         public override string GetSunLeval()
         {
-            return "--";
+            return _random.Next(0, 100) + "kWh";
         }
 
         protected override string GetDeviceName()
         {
-            return "バッテリー";
+            return "太陽光";
         }
     }
 }

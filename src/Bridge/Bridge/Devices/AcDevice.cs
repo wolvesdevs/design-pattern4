@@ -13,6 +13,11 @@ namespace Bridge.Devices
             return "--";
         }
 
+        public override string GetSunLeval()
+        {
+            return "--";
+        }
+
         protected override string GetDeviceName()
         {
             return "AC";
