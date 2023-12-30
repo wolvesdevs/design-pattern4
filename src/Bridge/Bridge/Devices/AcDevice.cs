@@ -7,5 +7,15 @@ namespace Bridge.Devices
         public AcDevice(IMeasure measure) : base(measure)
         {
         }
+
+        public override string GetBatteryLeval()
+        {
+            return "--";
+        }
+
+        protected override string GetDeviceName()
+        {
+            return "AC";
+        }
     }
 }

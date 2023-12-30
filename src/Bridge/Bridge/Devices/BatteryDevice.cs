@@ -11,9 +11,14 @@ namespace Bridge.Devices
         {
         }
 
-        public string GetBatteryLeval()
+        public override string GetBatteryLeval()
         {
             return _random.Next(0, 100) + "%";
+        }
+
+        protected override string GetDeviceName()
+        {
+            return "バッテリー";
         }
     }
 }
