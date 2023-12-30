@@ -1,11 +1,26 @@
-﻿namespace Bridge.Devices
+﻿using Bridge.Measures;
+
+namespace Bridge.Devices
 {
     public abstract class Device
     {
         private Random _random = new Random();
+        private IMeasure _measure;
 
-        public abstract string GetName();
-        public abstract string GetMeasure();
+        public Device(IMeasure measure)
+        {
+            _measure = measure;
+        }
+
+        public string GetName()
+        {
+            return _measure.GetName();
+        }
+
+        public string GetMeasure()
+        {
+            return _measure.GetMeasure();
+        }
 
         public string GetKando()
         {
